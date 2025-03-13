@@ -5,8 +5,8 @@ import 'package:food_app/core/widget/custom_auth_bottom.dart';
 import 'package:food_app/core/widget/custom_bottom_widget.dart';
 import 'package:food_app/core/widget/custom_text_field_widget.dart';
 
-class LoginView extends StatelessWidget {
-  LoginView({super.key});
+class RegisterView extends StatelessWidget {
+  RegisterView({super.key});
   final TextEditingController _controller = TextEditingController();
 
   @override
@@ -19,6 +19,14 @@ class LoginView extends StatelessWidget {
             ContainerAuth(),
             SizedBox(
               height: 50,
+            ),
+            CustomTextFieldWidget(
+              controller: _controller,
+              prefixIcon: Icon(Icons.person_outline_sharp),
+              labelText: "Your Name",
+            ),
+            SizedBox(
+              height: 30,
             ),
             CustomTextFieldWidget(
               controller: _controller,
@@ -42,7 +50,7 @@ class LoginView extends StatelessWidget {
               height: 100,
             ),
             CustomBottomWidget(
-                title: "Login",
+                title: "Register",
                 onPressed: () {},
                 textColor: Colors.white,
                 colorContainer: AppColors.Korange)
